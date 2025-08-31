@@ -52,47 +52,6 @@ class Program
         static void Main(string[] args)
     {
 
-        Console.WriteLine("hello world");
-        string[] list = new string[5];
-        list[0] = "task 1";
-        list[1] = "task 2";
-        list[2] = "task 3";
-        for (int i = 0; i < 3; i++)
-        {
-            Console.WriteLine($"{list[i]}");
-        }
-
-        List<string> taskList = new List<string>();
-
-        for (int i = 0; i < 3; i++)
-        {
-            taskList.Add($"task {i}");
-        }
-
-        for (int i = 0; i < taskList.Count; i++)
-        {
-            Console.WriteLine(taskList[i]);
-        }
-        Console.WriteLine("after Removing first Element");
-        taskList.RemoveAt(0);
-
-        Console.WriteLine(taskList[0]);
-
-        taskList[0] = "new task";
-        Console.WriteLine("new task added");
-
-        for (int i = 0; i < taskList.Count; i++)
-        {
-            Console.WriteLine(taskList[i]);
-        }
-
-        Console.WriteLine("insert element at index 1");
-
-        taskList.Insert(1, "inserted task");
-        for (int i = 0; i < taskList.Count; i++)
-        {
-            Console.WriteLine(taskList[i]);
-        }
         Console.WriteLine("TO DO LIST APP");
         TaskManager manager = new TaskManager();
         int option = 0;
@@ -112,7 +71,7 @@ class Program
 
                     Console.WriteLine("Task ?");
                     string? NewTask = Console.ReadLine();
-                    if (string.IsNullOrWhiteSpace(NgitewTask))
+                    if (string.IsNullOrWhiteSpace(NewTask))
                     {
                         Console.WriteLine("Empty");
                         continue;
